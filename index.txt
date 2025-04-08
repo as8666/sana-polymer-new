@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="INSPIRO" />
+    <meta
+      name="description"
+      content="Themeforest Template Polo, html template"
+    />
+    <link rel="icon" type="image/png" href="sana-logo.png" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Document title -->
+    <title>شرکت سانا پلیمر سپهر | صفحه اصلی</title>
+    <!-- Stylesheets & Fonts -->
+    <link href="css/plugins.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <style>
+      @media (min-width: 767px) {
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
+          overflow: hidden;
+        }
+
+        .body-inner {
+          display: grid;
+          grid-template-columns: repeat(
+            8,
+            100vw
+          ); /* هر سکشن 100% عرض ویوپورت */
+          grid-template-rows: 100vh; /* هر سکشن 100% ارتفاع ویوپورت */
+          overflow: hidden; /* جلوگیری از اسکرول اضافی */
+        }
+
+        .section {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        #header {
+          background-color: transparent;
+          position: fixed;
+          box-shadow: 0 4px 8px rgb(9, 75, 117, 0.4); /* سایه فقط در پایین هدر */
+          border-bottom: 0.1px solid rgb(9 75 117 / 43%);
+          transition: color 0.3s ease;
+          height: 80px !important;
+        }
+        section {
+          padding: 0;
+        }
+        #dotsMenu:before {
+          content: "";
+          background: rgb(0, 43, 73, 0.7);
+          position: absolute;
+          width: 32px;
+          right: -8px;
+          height: 100%;
+          border-radius: 20px;
+          top: -14px;
+          box-shadow: 0 5px 20px 0 rgba(37, 137, 213, 0.38),
+            0 5px 5px 0 rgba(37, 137, 213, 0.38);
+        }
+        .strong::after {
+          border-top: 2px solid #186587;
+          content: "";
+          display: block;
+          margin: auto;
+          width: 50px;
+        }
+        .body-inner {
+          display: grid;
+          grid-template-columns: repeat(
+            8,
+            100vw
+          ); /* هر سکشن 100% عرض ویوپورت */
+          grid-template-rows: 100vh; /* هر سکشن 100% ارتفاع ویوپورت */
+          position: relative;
+          width: 100vw;
+          height: 100vh;
+          overflow: hidden;
+        }
+
+        .slide-captions > span {
+          font-size: 12px !important;
+        }
+
+        .slide-captions > h2 {
+          font-size: 50px !important;
+        }
+
+        .section {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100vh;
+          opacity: 0;
+          transform: translateY(100px);
+          transition: opacity var(--duration, 0.8s) ease,
+            transform var(--duration, 0.8s) ease;
+          will-change: transform, opacity;
+          z-index: 1;
+          pointer-events: none; /* ❌ جلوگیری از کلیک روی سکشن‌های غیرفعال */
+        }
+        .section.active {
+          opacity: 1;
+          transform: translateY(0);
+          z-index: 10;
+          pointer-events: auto; /* ✅ فقط سکشن فعال قابل کلیک باشه */
+        }
+        .MainMenuOne li:hover a,
+        .MainMenuTwo li:hover a {
+          color: blue; /* ✅ تغییر رنگ متن لینک‌ها به آبی هنگام هاور */
+          transition: color 0.3s ease; /* ✅ انیمیشن نرم هنگام تغییر رنگ */
+        }
+        #mainMenu nav > ul > li > a {
+          font-size: 15px;
+          font-weight: bold !important;
+        }
+        /* جهت ورود سکشن‌ها */
+        [data-animation="fade-in"] {
+          transform: scale(0.9);
+        }
+        [data-animation="fade-in"].active {
+          transform: scale(1);
+        }
+
+        [data-animation="slide-left"] {
+          transform: translateX(100%);
+        }
+        [data-animation="slide-left"].active {
+          transform: translateX(0);
+        }
+
+        [data-animation="slide-right"] {
+          transform: translateX(-100%);
+        }
+        [data-animation="slide-right"].active {
+          transform: translateX(0);
+        }
+
+        [data-animation="slide-top"] {
+          transform: translateY(100%);
+        }
+        [data-animation="slide-top"].active {
+          transform: translateY(0);
+        }
+
+        [data-animation="slide-bottom"] {
+          transform: translateY(-100%);
+        }
+        [data-animation="slide-bottom"].active {
+          transform: translateY(0);
+        }
+
+        /* 🔹 Fade + Zoom */
+        [data-animation="fade-zoom"] {
+          transform: scale(0.6);
+        }
+        [data-animation="fade-zoom"].active {
+          transform: scale(1);
+        }
+
+        /* 🔹 اسلاید از چپ */
+        [data-animation="slide-left"] {
+          transform: translateX(100%);
+        }
+        [data-animation="slide-left"].active {
+          transform: translateX(0);
+        }
+
+        /* 🔹 اسلاید از راست */
+        [data-animation="slide-right"] {
+          transform: translateX(-100%);
+        }
+        [data-animation="slide-right"].active {
+          transform: translateX(0);
+        }
+
+        /* 🔹 اسلاید از بالا */
+        [data-animation="slide-top"] {
+          transform: translateY(100%);
+        }
+        [data-animation="slide-top"].active {
+          transform: translateY(0);
+        }
+
+        /* 🔹 اسلاید از پایین */
+        [data-animation="slide-bottom"] {
+          transform: translateY(-100%);
+        }
+        [data-animation="slide-bottom"].active {
+          transform: translateY(0);
+        }
+
+        /* 🔹 فلک از گوشه بالا راست */
+        [data-animation="flip-top-right"] {
+          transform: perspective(800px) rotate3d(1, 1, 0, -90deg);
+          transform-origin: top right;
+        }
+        [data-animation="flip-top-right"].active {
+          transform: perspective(800px) rotate3d(1, 1, 0, 0deg);
+        }
+
+        /* 🔹 چرخش با زوم */
+        [data-animation="zoom-rotate"] {
+          transform: scale(0.5) rotate(180deg);
+        }
+        [data-animation="zoom-rotate"].active {
+          transform: scale(1) rotate(0);
+        }
+
+        /* 🔹 اسلاید و چرخش */
+        [data-animation="slide-rotate"] {
+          transform: translateX(-100%) rotate(90deg);
+        }
+        [data-animation="slide-rotate"].active {
+          transform: translateX(0) rotate(0);
+        }
+
+        /* 🔹 چرخش حول محور X */
+        [data-animation="rotate-x"] {
+          transform: perspective(800px) rotateX(90deg);
+        }
+        [data-animation="rotate-x"].active {
+          transform: perspective(800px) rotateX(0);
+        }
+
+        /* 🔹 چرخش حول محور Y */
+        [data-animation="rotate-y"] {
+          transform: perspective(800px) rotateY(90deg);
+        }
+        [data-animation="rotate-y"].active {
+          transform: perspective(800px) rotateY(0);
+        }
+
+        /* چرخش حول دایره از بالا سمت راست */
+        [data-animation="ferris-wheel"] {
+          transform: perspective(1000px) rotate3d(1, 1, 0, 120deg)
+            translateX(100%) translateY(-100%);
+          opacity: 0;
+        }
+
+        [data-animation="ferris-wheel"].active {
+          transform: perspective(1000px) rotate3d(1, 1, 0, 0deg) translateX(0)
+            translateY(0);
+          opacity: 1;
+          transition: transform var(--duration, 1s) ease-out,
+            opacity var(--duration, 1s) ease-out;
+        }
+        .seperator.seperator-small,
+        .separator.seperator-small {
+          width: 40%;
+          margin: 5px auto;
+        }
+        .seperator::before,
+        .seperator::after,
+        .separator::before,
+        .separator::after {
+          border-bottom: 2px solid #0e80b1;
+          margin: auto;
+        }
+
+        .product .product-title h3,
+        .product .product-title h3 a {
+          font-size: 12px;
+          color: #252525;
+          transition: color 0.3s ease;
+        }
+
+        .product .product-title h3:hover,
+        .product .product-title h3 a:hover {
+          color: #1c6a8b;
+        }
+
+        .product .product-category {
+          font-size: 11px;
+          color: #020202;
+        }
+
+        .product {
+          margin-bottom: 40px;
+          position: relative;
+          display: block;
+          padding: 10px;
+          background-color: #ffffff;
+          border-radius: 6px;
+          border: 0.5px solid #1c6a8b85;
+          box-shadow: 1px 1px 10px rgba(28, 106, 139, 0.671);
+        }
+
+        div.content {
+          background-color: #227a9f;
+          box-shadow: 1px 1px 20px #1c6a8b;
+          border-radius: 7px;
+        }
+        .product .product-title {
+          max-width: 100%;
+        }
+        #products {
+          padding: 0 !important;
+        }
+        .heading-text.heading-line h2:before {
+          content: "";
+          position: absolute;
+          width: 270px;
+          height: 2px;
+          left: 0;
+          bottom: -8px;
+          right: 0;
+          background-color: #020202;
+          margin-top: 1px;
+        }
+        .call-to-action {
+          margin-bottom: 0px;
+        }
+        .MotherSerBox > div > div > div.icon {
+          left: 10px;
+        }
+        .MotherSerTitle {
+          margin-top: 120px;
+          margin-bottom: 20px;
+        }
+        .MotherSerTitle > div.seperator {
+          text-align: right;
+          width: 220px;
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+        .MotherConTitle > div.seperator {
+          text-align: center;
+          width: 220px;
+          margin-top: 0;
+          margin-bottom: 20px;
+        }
+        .MotherConTitle > h2 {
+          margin-bottom: 5px !important;
+          font-size: 30px !important;
+        }
+        section#contact_us > div.container > div.row {
+          margin-top: 70px !important;
+        }
+        .heading-text {
+          margin-top: 15px !important;
+        }
+        .seperator.seperator-small,
+        .separator.seperator-small {
+          width: 42%;
+          margin: 5px auto;
+        }
+        .after-long::before {
+          width: 250px !important;
+          background-color: #0e80b1 !important;
+        }
+        .heading-text h2 {
+          font-size: 45px;
+          margin-bottom: 50px;
+          letter-spacing: -0.7px;
+          line-height: 66px;
+          margin-top: 80px;
+        }
+        .logo-org > img {
+          height: 65px !important;
+        }
+      }
+
+      /* استایل موبایل */
+      @media (max-width: 767px) {
+        body {
+          overflow: auto;
+        }
+        .body-inner {
+          display: block; /* چیدمان عمودی */
+        }
+        .section {
+          height: auto;
+        }
+        #dotsMenu {
+          margin-top: -30px;
+        }
+        #header {
+          position: fixed;
+        }
+        .body-inner {
+          display: block; /* جلوگیری از چیدمان غلط */
+          width: 100%;
+          overflow: visible;
+        }
+
+        /* اسلایدر همچنان باید به صورت اسلایدی نمایش داده شود */
+        #slider {
+          position: relative;
+          display: flex; /* برای نمایش اسلایدها کنار هم */
+          width: 100%;
+          height: auto;
+          overflow: hidden;
+        }
+
+        #slider .slide {
+          min-width: 100%; /* هر اسلاید دقیقا به اندازه عرض ویوپورت باشد */
+          transition: transform 0.5s ease-in-out;
+        }
+
+        #slider .slides-wrapper {
+          display: flex;
+          transition: transform 0.5s ease-in-out;
+          will-change: transform;
+        }
+
+        /* سایر سکشن‌ها زیر هم قرار بگیرند */
+        .section {
+          position: relative !important;
+          display: block !important;
+          width: 100% !important;
+          height: auto !important;
+          opacity: 1 !important;
+          transform: none !important;
+          pointer-events: auto !important;
+          visibility: visible !important;
+        }
+        #slide1 {
+          display: none !important;
+        }
+        #slide2 {
+          display: none !important;
+        }
+        .img-about_us {
+          margin-top: 30px;
+        }
+        .btn-more-carousel-max {
+          margin-bottom: 17px !important;
+          margin-left: 23px !important;
+        }
+        .btn-more-carousel-min-valed {
+          display: none !important;
+        }
+        .MotherSerTitle > p.lead {
+          display: none !important;
+        }
+        .MotherSerTitle {
+          margin-bottom: 50px !important;
+        }
+        #update {
+          height: 40px !important;
+        }
+      }
+
+      :root {
+        direction: rtl;
+        text-align: left;
+      }
+      .seperator,
+      .separator {
+        text-align: right;
+      }
+      h3 {
+        color: #101827;
+      }
+
+      @font-face {
+        font-family: "vazir";
+        src: url("fonts/Gandom.ttf") format("truetype"),
+          url("fonts/Gandom.woff") format("woff"),
+          url("fonts/Gandom.eot") format("eot");
+      }
+
+      body {
+        font-family: "vazir", sans-serif !important;
+      }
+      .lead {
+        font-family: "vazir", sans-serif !important;
+        font-size: 1.1rem;
+        color: #111111 !important;
+      }
+      .lead-ser {
+        font-family: "vazir", sans-serif !important;
+        font-size: 1.1rem;
+        color: #6c757d;
+      }
+      h3 {
+        font-family: "vazir", sans-serif !important;
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      h1,
+      h2,
+      h4,
+      h5,
+      p,
+      button,
+      select,
+      h6 {
+        font-family: "vazir", sans-serif !important;
+      }
+      a {
+        font-family: "vazir", sans-serif !important;
+      }
+      #About_us {
+        background-color: #e9eff6;
+        background-size: cover;
+      }
+      #our_service {
+        background-color: #e9eff6;
+        background-size: cover;
+      }
+      #products {
+        background-color: #e9eff6;
+        background-size: cover;
+      }
+      .child-ser-box > div.icon-box > h3,
+      .child-ser-box > div.icon-box > p {
+        text-align: right !important;
+      }
+      .icon-box.medium > h3,
+      .icon-box.medium > h4,
+      .icon-box.medium > h5 {
+        margin: 0 84px 10px 12px;
+      }
+      .icon-box.medium > p {
+        margin: 0 84px 20px 0;
+      }
+      .icon-box.border.small .icon {
+        height: 46px;
+        position: absolute;
+        top: 5px;
+        width: 46px;
+        right: 17px;
+      }
+      .icon-box.border .icon i {
+        color: #2589d1;
+      }
+      .icon-box.border .icon {
+        border: 3px solid #2589d1;
+      }
+      .loading-spinner {
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        border: 2px solid currentColor;
+        border-top-color: transparent;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        vertical-align: middle;
+        margin: auto auto;
+      }
+      .custom-btn-gold-rounded {
+        border-color: #1c6789 !important;
+        color: #1c6789 !important;
+        width: 90.22px !important;
+        height: 42px !important;
+      }
+      .custom-btn-gold-rounded:hover {
+        background-color: #1c6789 !important;
+        color: #fff !important;
+      }
+      .custom-btn-gold-rounded:active {
+        background-color: transparent !important;
+        color: #1c6789 !important;
+      }
+      .custom-btn-gold-rounded:focus {
+        background-color: transparent !important;
+        color: #1c6789 !important;
+      }
+      @keyframes spin {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      #header a.clicked,
+      #header i.clicked,
+      #header span.clicked {
+        color: #10415e !important;
+      }
+      #header-blur {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.1);
+        z-index: -1;
+      }
+      .sana-bg {
+        background-color: #18678a !important;
+      }
+      #slide1 video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(8px) brightness(35%); /* تار و تیره کردن همزمان */
+      }
+      #update {
+        border-bottom-right-radius: 0 !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-left-radius: 5px !important;
+        border-top-left-radius: 5px !important;
+      }
+      #type {
+        border-bottom-left-radius: 0 !important;
+        border-top-left-radius: 0 !important;
+        border-bottom-right-radius: 5px !important;
+        border-top-right-radius: 5px !important;
+      }
+      /* تغییر فونت و استایل Placeholder در همه اینپوت‌ها و تکستاریاها */
+      input::placeholder,
+      textarea::placeholder {
+        font-family: "vazir"; /* تغییر فونت */
+        color: #888; /* تغییر رنگ */
+        font-size: 12px; /* تغییر اندازه فونت */
+        opacity: 1; /* جلوگیری از کم‌رنگ شدن پیش‌فرض */
+      }
+
+      /* برای سازگاری با مرورگرهای مختلف */
+      input::-webkit-input-placeholder,
+      textarea::-webkit-input-placeholder {
+        font-family: "vazir";
+        color: #888;
+      }
+
+      input::-moz-placeholder,
+      textarea::-moz-placeholder {
+        font-family: "vazir";
+        color: #888;
+      }
+
+      input:-ms-input-placeholder,
+      textarea:-ms-input-placeholder {
+        font-family: "vazir";
+        color: #888;
+      }
+
+      input:-moz-placeholder,
+      textarea:-moz-placeholder {
+        font-family: "vazir";
+        color: #888;
+      }
+      .btn-slider-color-blue {
+        opacity: 1;
+        animation-duration: 600ms;
+        background-color: #186587 !important;
+        border-color: #186587 !important;
+        transition: color 0.3s ease;
+        width: 111.95px !important;
+        height: 40px !important;
+      }
+      .btn-slider-color-blue:hover {
+        background-color: #0e80b1 !important;
+        border-color: #0e80b1 !important;
+        transition: color 0.3s ease;
+      }
+      .btn-slider-color-white {
+        opacity: 1;
+        animation-duration: 600ms;
+        background-color: #eaecec !important;
+        border-color: #eaecec !important;
+        transition: color 0.3s ease;
+        width: 86.91px !important;
+        height: 40px !important;
+      }
+      .btn-slider-color-white:hover {
+        background-color: #c7c7c7 !important;
+        border-color: #c7c7c7 !important;
+        transition: color 0.3s ease;
+      }
+      #search .btn-search-close {
+        background-color: #186587;
+      }
+      .p-dropdown .p-dropdown-content,
+      .p-dropdown ul.p-dropdown-content {
+        border: 1px solid #186687a2;
+        box-shadow: 1px 1px 10px #186587;
+      }
+      a:not(.btn):not(.badge):hover,
+      a:not(.btn):not(.badge):focus,
+      a:not(.btn):not(.badge):active {
+        text-decoration: none;
+        outline: none;
+        color: #2589d2 !important;
+      }
+      button.btn:hover,
+      button.btn:focus,
+      button.btn:not(:disabled):not(.disabled):active,
+      button.btn:not(:disabled):not(.disabled).active,
+      .btn:not(.close):not(.mfp-close):hover,
+      .btn:not(.close):not(.mfp-close):focus,
+      .btn:not(.close):not(.mfp-close):not(:disabled):not(.disabled):active,
+      .btn:not(.close):not(.mfp-close):not(:disabled):not(.disabled).active,
+      a.btn:not([href]):not([tabindex]):hover,
+      a.btn:not([href]):not([tabindex]):focus,
+      a.btn:not([href]):not([tabindex]):not(:disabled):not(.disabled):active,
+      a.btn:not([href]):not([tabindex]):not(:disabled):not(.disabled).active {
+        background-color: #2589d2;
+        border-color: #2589d2;
+        color: #fff;
+        text-decoration: none;
+      }
+      .social-icons.social-icons-colored .social-instagram a,
+      .social-icons.social-icons-colored-hover .social-instagram a:hover {
+        background-color: #238ad2;
+        color: #fff !important;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header" data-transparent="true" class="dark header-logo-center">
+      <div id="header-blur"></div>
+      <div class="header-inner">
+        <div class="container">
+          <!--Logo-->
+          <div id="logo">
+            <a href="index.html">
+              <span class="logo-default logo-org">
+                <img src="sana-logo-shadow.png" alt="png" />
+              </span>
+              <span class="logo-dark logo-org">
+                <img src="sana-logo-shadow.png" alt="png" />
+              </span>
+            </a>
+          </div>
+          <!--End: Logo-->
+          <!-- Search -->
+          <div id="search">
+            <a
+              id="btn-search-close"
+              class="btn-search-close"
+              aria-label="Close search form"
+              ><i class="icon-x"></i
+            ></a>
+            <form
+              class="search-form"
+              action="search-results-page.html"
+              method="get"
+            >
+              <input
+                class="form-control"
+                name="q"
+                type="text"
+                placeholder="محصول مورد نظر خود را جست و جو کنید  ..."
+              />
+              <span class="text-muted"
+                >برای بستن کلید esc و برای جست‌و‌جو کلید enter را بزنید</span
+              >
+            </form>
+          </div>
+          <!-- end: search -->
+          <!--Header Extras-->
+          <div class="header-extras">
+            <ul>
+              <li>
+                <a id="btn-search" href="#"> <i class="icon-search"></i></a>
+              </li>
+              <li>
+                <div class="p-dropdown">
+                  <a href="#"><i class="icon-globe"></i><span>FA</span></a>
+                  <ul class="p-dropdown-content">
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">فارسی</a></li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!--end: Header Extras-->
+          <!--Navigation Resposnive Trigger-->
+          <div id="mainMenu-trigger">
+            <a class="lines-button x"><span class="lines"></span></a>
+          </div>
+          <!--end: Navigation Resposnive Trigger-->
+          <!--Navigation-->
+          <div id="mainMenu">
+            <div class="container">
+              <nav>
+                <!--Left Menu-->
+                <ul class="MainMenuOne">
+                  <li><a href="index.html">خدمات ما</a></li>
+                  <li><a href="About_us.html">درباره ما</a></li>
+                  <li><a href="index.html">تماس با ما</a></li>
+                  <li><a href="index.html">محصولات</a></li>
+                </ul>
+                <!--Right Menu-->
+                <ul class="MainMenuTwo">
+                  <li><a href="index.html">خانه</a></li>
+                  <li><a href="index.html">گالری</a></li>
+                  <li><a href="index.html">استعلام قیمت</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <!--end: Navigation-->
+          <nav id="dotsMenu">
+            <ul>
+              <li class="d-none d-lg-block">
+                <a href="#slide1"><span>اسلاید اول</span></a>
+              </li>
+              <li id="ItemChangeaValue">
+                <a href="#slide2"><span>اسلاید دوم</span></a>
+              </li>
+              <li>
+                <a href="#About_us"><span>درباره ما</span></a>
+              </li>
+              <li>
+                <a href="#products"><span>خدمات ما</span></a>
+              </li>
+              <li>
+                <a href="#our_service"><span>محصولات</span></a>
+              </li>
+              <li>
+                <a href="#Price_inquiry"><span>استعلام قیمت</span></a>
+              </li>
+              <li>
+                <a href="#contact_us"><span>تماس با ما</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="body-inner">
+      <!-- Inspiro Slider -->
+      <section
+        id="slider"
+        class="inspiro-slider slider-fullscreen dots-creative d-block d-lg-none"
+        data-height-xs="550"
+      >
+        <!-- Slide 1 -->
+        <div class="slide" data-bg-video="video/pexels-waves.mp4">
+          <div class="bg-overlay"></div>
+          <div class="container">
+            <div class="slide-captions text-center text-light">
+              <!-- Captions -->
+              <span class="strong">W ITH POLO TEMPLATE</span>
+              <h2 class="text-dark">
+                Create Your <br />Awesome Website With Ease
+              </h2>
+              <a class="btn" href="#">Purchase Now</a>
+              <a class="btn btn-light">Purchase</a>
+              <!-- end: Captions -->
+            </div>
+          </div>
+        </div>
+        <!-- end: Slide 1 -->
+        <!-- Slide 1 -->
+        <div class="slide background-colored">
+          <div class="particles particles-dots"></div>
+          <div class="bg-overlay"></div>
+          <div class="container">
+            <div class="slide-captions text-center text-light">
+              <!-- Captions -->
+              <span class="strong">W ITH POLO TEMPLATE</span>
+              <h2 class="text-dark">
+                Create Your <br />Awesome Website With Ease
+              </h2>
+              <a class="btn" href="#">Purchase Now</a>
+              <a class="btn btn-light">Purchase</a>
+              <!-- end: Captions -->
+            </div>
+          </div>
+        </div>
+        <!-- end: Slide 1 -->
+      </section>
+      <!--end: Inspiro Slider -->
+      <!-- Slide 1 -->
+      <section
+        id="slide1"
+        data-animation="fade-in"
+        data-duration="1.5s"
+        class="section d-none d-lg-flex align-items-center"
+      >
+        <div
+          class="slide d-flex align-items-center"
+          data-bg-video="made_gif.webm"
+        >
+          <div class="container">
+            <div class="slide-captions text-center text-light">
+              <!-- Captions -->
+              <span
+                class="strong fadeInUp"
+                style="opacity: 1; animation-duration: 600ms"
+                >تضمین کیفیت ، قیمت</span
+              >
+              <h2
+                class="text-dark fadeInUp"
+                style="opacity: 1; animation-duration: 600ms"
+              >
+                سانا پلیمر سپهر<br />
+                نوآوری در پلیمرها برای آینده‌ای پایدار!
+              </h2>
+              <a
+                class="btn fadeInUp btn-slider-color-blue circle-animation"
+                href="index.html"
+                >ثبت درخواست</a
+              >
+              <a
+                class="btn btn-light fadeInUp btn-slider-color-white circle-animation"
+                href="index.html"
+                >محصولات</a
+              >
+              <!-- end: Captions -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Slide 1 -->
+      <!-- Slide 2 -->
+      <section
+        id="slide2"
+        data-animation="fade-in"
+        data-duration="1.5s"
+        class="section d-none d-lg-flex align-items-center"
+      >
+        <div class="slide fullscreen sana-bg d-flex align-items-center">
+          <div class="particles particles-dots"></div>
+          <div class="container">
+            <div class="container-fullscreen">
+              <div class="text-middle text-center text-light">
+                <!-- Captions -->
+                <h3 data-animate="fadeIn">
+                  قدرت پلیمر، تضمین کیفیت ، سانا پلیمر سپهر!
+                </h3>
+                <!-- end: Captions -->
+              </div>
+            </div>
+          </div>
+          <!-- Particles Scripts -->
+        </div>
+      </section>
+      <!-- end: Slide 2 -->
+      <!-- About us -->
+      <section
+        id="About_us"
+        data-animation="fade-in"
+        data-duration="1.5s"
+        class="section position-relative"
+      >
+        <div class="container mt-lg-5 position-relative" style="z-index: 2">
+          <div class="row d-flex justify-content-between">
+            <div class="col-lg-4 text-right">
+              <h3 style="margin-bottom: 0">درباره ما</h3>
+              <div
+                class="seperator seperator-small"
+                style="margin-right: 0; padding-right: 0; margin-top: 0"
+              ></div>
+              <p class="lead">
+                شرکت سانا پلیمر سپهر یکی از پیشروترین شرکت‌ها در صنعت پلیمر و
+                تولید محصولات پلیمری در ایران است. ما با بهره‌گیری از فناوری‌های
+                نوین و استفاده از مواد اولیه باکیفیت، محصولاتی مقاوم، ایمن و
+                مطابق با استانداردهای بین‌المللی تولید می‌کنیم. هدف ما ارائه
+                راهکارهای نوآورانه در حوزه پلیمر و تامین نیازهای صنایع مختلف از
+                جمله بسته‌بندی، خودروسازی، ساختمانی و پزشکی است. مطابق با
+                استانداردهای بین‌المللی تولید می‌کنیم. هدف ما ارائه راهکارهای
+                نوآورانه در حوزه پلیمر و تامین نیازهای صنایع
+              </p>
+              <a
+                href="#services"
+                class="btn custom-btn-gold-rounded circle-animation btn-outline btn-rounded"
+              >
+                خدمات ما
+              </a>
+            </div>
+            <div
+              class="col-lg-6 d-flex align-items-center justify-content-center text-light img-about_us"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- end: About us -->
+      <!-- Our service -->
+      <section
+        id="our_service"
+        data-animation="fade-in"
+        data-duration="1.5s"
+        class="section"
+        style="--duration: 1.5s; z-index: 10; pointer-events: auto"
+      >
+        <div class="container">
+          <div class="row MotherSerTitle">
+            <div class="col-lg-7">
+              <div class="heading-text heading-line text-right">
+                <div>
+                  <h3 class="after-long d-inline d-lg-block">خدمات ما</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row MotherSerBox">
+            <div
+              class="col-lg-4 animated fadeInUp visible child-ser-box"
+              data-animate="fadeInUp"
+              data-animate-delay="0"
+            >
+              <div class="icon-box effect medium border small">
+                <div class="icon">
+                  <a href="#"><i class="fa fa-plug"></i></a>
+                </div>
+                <h3>تولید و عرضه مواد پلیمری</h3>
+                <p class="lead-ser">
+                  شرکت سانا پلیمر با استفاده از فناوری‌های پیشرفته، انواع مواد
+                  پلیمری با کیفیت بالا را تولید و به بازار عرضه می‌کند. این مواد
+                  شامل پلی‌اتیلن، پلی‌پروپیلن، PVC و سایر ترکیبات پلیمری است
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 animated fadeInUp visible child-ser-box"
+              data-animate="fadeInUp"
+              data-animate-delay="200"
+            >
+              <div class="icon-box effect medium border small">
+                <div class="icon">
+                  <a href="#"><i class="fa fa-desktop"></i></a>
+                </div>
+                <h3>مشاوره فنی و مهندسی</h3>
+                <p class="lead-ser">
+                  سانا پلیمر با تیمی از متخصصان مجرب، خدمات مشاوره فنی و مهندسی
+                  را به مشتریان خود ارائه می‌دهد. این خدمات شامل انتخاب مواد
+                  پلیمری مناسب، طراحی محصولات و بهینه‌سازی فرآیندهای تولید است.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 animated fadeInUp visible child-ser-box"
+              data-animate="fadeInUp"
+              data-animate-delay="800"
+            >
+              <div class="icon-box effect medium border small">
+                <div class="icon">
+                  <a href="#"><i class="fa fa-trophy"></i></a>
+                </div>
+                <h3>پشتیبانی پس از فروش</h3>
+                <p class="lead-ser">
+                  سانا پلیمر با ارائه خدمات پشتیبانی پس از فروش، همراهی بلندمدت
+                  با مشتریان را تضمین می‌کند. این خدمات شامل آموزش نحوه استفاده
+                  از محصولات، رفع مشکلات فنی و ارائه راهنمایی‌های لازم برای
+                  افزایش بهره‌وری است.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="col-lg-4 animated fadeInUp visible child-ser-box"
+              data-animate="fadeInUp"
+              data-animate-delay="600"
+            >
+              <div class="icon-box effect medium border small">
+                <div class="icon">
+                  <a href="#"><i class="far fa-lightbulb"></i></a>
+                </div>
+                <h3>تحقیق و توسعه (R&amp;D)</h3>
+                <p class="lead-ser">
+                  بخش تحقیق و توسعه سانا پلیمر همواره در حال بررسی و ایجاد
+                  فناوری‌های جدید در حوزه پلیمرها است. این شرکت با سرمایه‌گذاری
+                  در پروژه‌های تحقیقاتی، محصولات نوآورانه و سازگار با محیط زیست
+                  تولید می‌کند.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 animated fadeInUp visible child-ser-box"
+              data-animate="fadeInUp"
+              data-animate-delay="800"
+            >
+              <div class="icon-box effect medium border small">
+                <div class="icon">
+                  <a href="#"><i class="fa fa-trophy"></i></a>
+                </div>
+                <h3>پشتیبانی پس از فروش</h3>
+                <p class="lead-ser">
+                  سانا پلیمر با ارائه خدمات پشتیبانی پس از فروش، همراهی بلندمدت
+                  با مشتریان را تضمین می‌کند. این خدمات شامل آموزش نحوه استفاده
+                  از محصولات، رفع مشکلات فنی و ارائه راهنمایی‌های لازم برای
+                  افزایش بهره‌وری است.
+                </p>
+              </div>
+            </div>
+            <div
+              class="col-lg-4 animated fadeInUp visible child-ser-box"
+              data-animate="fadeInUp"
+              data-animate-delay="800"
+            >
+              <div class="icon-box effect medium border small">
+                <div class="icon">
+                  <a href="#"><i class="fa fa-trophy"></i></a>
+                </div>
+                <h3>پشتیبانی پس از فروش</h3>
+                <p class="lead-ser">
+                  سانا پلیمر با ارائه خدمات پشتیبانی پس از فروش، همراهی بلندمدت
+                  با مشتریان را تضمین می‌کند. این خدمات شامل آموزش نحوه استفاده
+                  از محصولات، رفع مشکلات فنی و ارائه راهنمایی‌های لازم برای
+                  افزایش بهره‌وری است.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Our service -->
+      <!-- Page Content -->
+      <section
+        id="products"
+        data-animation="fade-in"
+        data-duration="1.5s"
+        class="section d-lg-flex align-items-center"
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="heading-text heading-line text-right">
+                <div>
+                  <h2 class="after-long d-inline d-lg-block">محصولات</h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="content col-lg-12">
+              <!-- <h4 class="ml-4 pb-1 pt-2 mb-0 text-white text-left">
+            Shop products Carousel
+          </h4> -->
+              <!-- <div class="corner-top-right"></div>
+          <div class="corner-top-left"></div> -->
+              <!--Shop products Carousel -->
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="carousel m-t-40" data-items="7">
+                    <div class="product">
+                      <div class="product-image">
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/1.jpg"
+                        /></a>
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/10.jpg"
+                        /></a>
+                        <span class="product-new">جدید</span>
+                        <div class="product-overlay">
+                          <a
+                            href="shop-product-ajax-page.html"
+                            data-lightbox="ajax"
+                            >مشاهده</a
+                          >
+                        </div>
+                      </div>
+                      <div class="product-description">
+                        <div class="product-category">نامعلوم</div>
+                        <div class="product-title">
+                          <h3><a href="#">چتایی</a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product">
+                      <div class="product-image">
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/2.jpg"
+                        /></a>
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/6.jpg"
+                        /></a>
+                        <div class="product-overlay">
+                          <a
+                            href="shop-product-ajax-page.html"
+                            data-lightbox="ajax"
+                            >مشاهده</a
+                          >
+                        </div>
+                      </div>
+                      <div class="product-description">
+                        <div class="product-category">نامعلوم</div>
+                        <div class="product-title">
+                          <h3><a href="#">کیسه های پلی پروپیلن </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product">
+                      <div class="product-image">
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/3.jpg"
+                        /></a>
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/7.jpg"
+                        /></a>
+                        <span class="product-hot">پرفروش</span>
+                        <div class="product-overlay">
+                          <a
+                            href="shop-product-ajax-page.html"
+                            data-lightbox="ajax"
+                            >مشاهده</a
+                          >
+                        </div>
+                      </div>
+                      <div class="product-description">
+                        <div class="product-category">نامعلوم</div>
+                        <div class="product-title">
+                          <h3><a href="#">رول های پلی پروپیلن </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product">
+                      <div class="product-image">
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/4.jpg"
+                        /></a>
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/9.jpg"
+                        /></a>
+                        <div class="product-overlay">
+                          <a
+                            href="shop-product-ajax-page.html"
+                            data-lightbox="ajax"
+                            >مشاهده</a
+                          >
+                        </div>
+                      </div>
+                      <div class="product-description">
+                        <div class="product-category">نامعلوم</div>
+                        <div class="product-title">
+                          <h3><a href="#">رول های ساختمانی</a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product">
+                      <div class="product-image">
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/5.jpg"
+                        /></a>
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/11.jpg"
+                        /></a>
+                        <div class="product-overlay">
+                          <a
+                            href="shop-product-ajax-page.html"
+                            data-lightbox="ajax"
+                            >مشاهده</a
+                          >
+                        </div>
+                      </div>
+                      <div class="product-description">
+                        <div class="product-category">نامعلوم</div>
+                        <div class="product-title">
+                          <h3><a href="#">کیسه های AD STAR </a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product">
+                      <div class="product-image">
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/6.jpg"
+                        /></a>
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/2.jpg"
+                        /></a>
+                        <div class="product-overlay">
+                          <a
+                            href="shop-product-ajax-page.html"
+                            data-lightbox="ajax"
+                            >مشاهده</a
+                          >
+                        </div>
+                      </div>
+                      <div class="product-description">
+                        <div class="product-category">نامعلوم</div>
+                        <div class="product-title">
+                          <h3><a href="#">راشل و سایبان</a></h3>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="product">
+                      <div class="product-image">
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/6.jpg"
+                        /></a>
+                        <a href="#"
+                          ><img
+                            alt="Shop product image!"
+                            src="images/shop/products/2.jpg"
+                        /></a>
+                        <div class="product-overlay">
+                          <a
+                            href="shop-product-ajax-page.html"
+                            data-lightbox="ajax"
+                            >مشاهده</a
+                          >
+                        </div>
+                      </div>
+                      <div class="product-description">
+                        <div class="product-category">نامعلوم</div>
+                        <div class="product-title">
+                          <h3><a href="#">کیسه های راشل</a></h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--end: Shop products Carousel -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Page Content -->
+      <!-- Our numbers -->
+      <section
+        id="Price_inquiry"
+        data-animation="fade-in"
+        data-duration="1.5s"
+        class="section"
+      >
+        <div
+          class="call-to-action background-image w-100 h-100"
+          style="background-image: url(sana-bg.png)"
+        >
+          <div class="particles particles-dots"></div>
+          <div
+            class="container h-100 text-center d-flex align-items-center justify-content-center"
+          >
+            <div
+              class="row d-flex align-items-center justify-content-center m-auto"
+            >
+              <h3 class="text-light col-lg-12">
+                همین حالا قیمت محصولات را استعلام بگیرید و با اطمینان از قیمت،
+                بهترین انتخاب را داشته باشید!
+              </h3>
+              <p class="text-light col-lg-12">
+                با سانا پلیمر سپهر، ترکیبی از کیفیت برتر و قیمت رقابتی را تجربه
+                کنید—ارزش واقعی در هر خرید!
+              </p>
+              <form class="col-lg-12 m-auto text-center w-100">
+                <div class="form-group m-auto" style="max-width: 25rem">
+                  <div class="input-group my-3">
+                    <select class="form-control" id="type">
+                      <option value="line">Line</option>
+                      <option value="bar">Bar</option>
+                      <option value="bar">Width</option>
+                    </select>
+                    <div class="input-group-append">
+                      <button class="btn btn-light" id="update">استعلام</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Our numbers -->
+      <!-- Contact -->
+      <section
+        id="contact_us"
+        data-animation="fade-in"
+        data-duration="1.5s"
+        class="section"
+        style="
+          background-image: url(homepages/branding/images/background-4.png);
+        "
+      >
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-lg-12 MotherConTitle">
+                  <h2 class="m-b-10 text-right">تماس با ما</h2>
+                  <div class="seperator seperator-small mr-0"></div>
+                  <p class="lead text-right m-b-40">
+                    برای ارتباط با شرکت سانا پلیمر سپهر، با ما در تماس باشید. ما
+                    در تهران، خیابان پامنار واقع شده‌ایم و آماده پاسخگویی به
+                    نیازهای شما هستیم. تیم ما با افتخار آماده مشاوره و دریافت
+                    سفارشات شما در زمینه محصولات پلیمری است. از طریق تلفن، ایمیل
+                    یا فرم تماس در وب‌سایت می‌توانید با ما ارتباط برقرار کنید.
+                  </p>
+                </div>
+                <div class="col-lg-6 m-b-30 text-right">
+                  <address>
+                    <strong>ادرس دفتر مرکزی:</strong><br />
+                    خیابان پامنار ، کوچه حاجی ها<br />
+                    پلاک 27 ، دفتر مرکزی سانا پلیمر<br />
+                  </address>
+                </div>
+                <div class="col-lg-6 m-b-30 text-right">
+                  <strong>تلفن:</strong> (+1) 1234 56789
+                  <br />
+                  <strong>ایمیل:</strong>
+                  <a
+                    href="/cdn-cgi/l/email-protection"
+                    class="__cf_email__"
+                    data-cfemail="375e595158775e5944475e45581a5a52535e561954585a"
+                    >[email&#160;protected]</a
+                  >
+                </div>
+                <div class="col-lg-12 m-b-30">
+                  <h4>مارا در فضای مجازی دنبال کنید</h4>
+                  <div
+                    class="social-icons social-icons-light social-icons-colored-hover"
+                  >
+                    <ul
+                      class="d-flex align-items-center justify-content-center"
+                    >
+                      <li class="social-instagram">
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                      </li>
+                      <li class="social-instagram">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-5 offset-1">
+              <form
+                class="widget-contact-form"
+                novalidate
+                action="include/contact-form.php"
+                role="form"
+                method="post"
+              >
+                <div class="row">
+                  <div class="form-group col-md-6">
+                    <label for="name">نام</label>
+                    <input
+                      type="text"
+                      aria-required="true"
+                      name="widget-contact-form-name"
+                      class="form-control required name"
+                      placeholder="نام خود را وارد کنید"
+                    />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="email">ایمیل</label>
+                    <input
+                      type="email"
+                      aria-required="true"
+                      required
+                      name="widget-contact-form-email"
+                      class="form-control required email"
+                      placeholder="ایمیل خود را وارد کنید"
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6 form-group">
+                    <label class="upper" for="phone">شماره همراه</label>
+                    <input
+                      type="text"
+                      class="form-control required"
+                      name="widget-contact-form-phone"
+                      placeholder="شماره تلفن خود را وارد کنید"
+                      aria-required="true"
+                    />
+                  </div>
+
+                  <div class="form-group col-lg-6">
+                    <label>انتخاب خدمات</label>
+                    <select name="widget-contact-form-services">
+                      <option value="">خدمات خود را انتخاب کنید</option>
+                      <option value="Wordpress">همکاری</option>
+                      <option value="PHP / MySQL">درخواست خرید عمده</option>
+                      <option value="HTML5 / CSS3">پیشنهاد</option>
+                      <option value="Graphic Design">انتقاد</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="message">پیام</label>
+                  <textarea
+                    type="text"
+                    name="widget-contact-form-message"
+                    rows="8"
+                    class="form-control required"
+                    placeholder="پیام خود را برای شرکت سانا پلیمر بنویسید"
+                  ></textarea>
+                </div>
+                <div class="form-group">
+                  <button class="btn btn-light" type="submit" id="form-submit">
+                    <i class="fa fa-paper-plane"></i>&nbsp;ارسال
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Contact -->
+    </div>
+
+    <!-- Scroll top -->
+
+    <a id="scrollTop"
+      ><i class="icon-chevron-up"></i><i class="icon-chevron-up"></i
+    ></a>
+    <!--Plugins-->
+    <script
+      data-cfasync="false"
+      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+    ></script>
+    <script src="js/jquery.js"></script>
+    <script data-cfasync="false">
+      !(function () {
+        "use strict";
+        function e(e) {
+          try {
+            if ("undefined" == typeof console) return;
+            "error" in console ? console.error(e) : console.log(e);
+          } catch (e) {}
+        }
+        function t(e) {
+          return (
+            (d.innerHTML = '<a href="' + e.replace(/"/g, "&quot;") + '"></a>'),
+            d.childNodes[0].getAttribute("href") || ""
+          );
+        }
+        function r(e, t) {
+          var r = e.substr(t, 2);
+          return parseInt(r, 16);
+        }
+        function n(n, c) {
+          for (var o = "", a = r(n, c), i = c + 2; i < n.length; i += 2) {
+            var l = r(n, i) ^ a;
+            o += String.fromCharCode(l);
+          }
+          try {
+            o = decodeURIComponent(escape(o));
+          } catch (u) {
+            e(u);
+          }
+          return t(o);
+        }
+        function c(t) {
+          for (var r = t.querySelectorAll("a"), c = 0; c < r.length; c++)
+            try {
+              var o = r[c],
+                a = o.href.indexOf(l);
+              a > -1 && (o.href = "mailto:" + n(o.href, a + l.length));
+            } catch (i) {
+              e(i);
+            }
+        }
+        function o(t) {
+          for (var r = t.querySelectorAll(u), c = 0; c < r.length; c++)
+            try {
+              var o = r[c],
+                a = o.parentNode,
+                i = o.getAttribute(f);
+              if (i) {
+                var l = n(i, 0),
+                  d = document.createTextNode(l);
+                a.replaceChild(d, o);
+              }
+            } catch (h) {
+              e(h);
+            }
+        }
+        function a(t) {
+          for (var r = t.querySelectorAll("template"), n = 0; n < r.length; n++)
+            try {
+              i(r[n].content);
+            } catch (c) {
+              e(c);
+            }
+        }
+        function i(t) {
+          try {
+            c(t), o(t), a(t);
+          } catch (r) {
+            e(r);
+          }
+        }
+        var l = "/cdn-cgi/l/email-protection#",
+          u = ".__cf_email__",
+          f = "data-cfemail",
+          d = document.createElement("div");
+        i(document),
+          (function () {
+            var e =
+              document.currentScript ||
+              document.scripts[document.scripts.length - 1];
+            e.parentNode.removeChild(e);
+          })();
+      })();
+    </script>
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+
+    <!--Template functions-->
+    <script src="js/functions.js"></script>
+
+    <!-- Partical Js files  -->
+    <script
+      src="plugins/particles/particles.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="plugins/particles/particles-dots.js"
+      type="text/javascript"
+    ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".circle-animation");
+
+        buttons.forEach((button) => {
+          button.addEventListener("click", function () {
+            if (button.querySelector(".loading-spinner")) return; // اگر دکمه قبلاً در حال لود شدن است، از اجرای مجدد جلوگیری کن
+
+            const originalText = button.innerHTML; // ذخیره متن اصلی
+            button.innerHTML = ""; // متن دکمه را حذف کن
+
+            // ایجاد دایره چرخان
+            const spinner = document.createElement("span");
+            spinner.classList.add("loading-spinner");
+
+            button.appendChild(spinner); // اضافه کردن دایره چرخان داخل دکمه
+
+            setTimeout(() => {
+              button.innerHTML = originalText; // بازگرداندن متن اصلی بعد از 3 ثانیه
+            }, 10000);
+          });
+        });
+      });
+    </script>
+    <!-- end: Partical Js files  -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let currentSection = 0;
+        const sections = document.querySelectorAll(".section");
+        const totalSections = sections.length;
+        const dotsMenuLinks = document.querySelectorAll("#dotsMenu a");
+        const dotsMenuItems = document.querySelectorAll("#dotsMenu li");
+        const dropdowns = document.querySelectorAll(".p-dropdown-content");
+        const dotsMenuSpans = document.querySelectorAll("#dotsMenu li span");
+        const dropdownMenuLinks = document.querySelectorAll(
+          ".dropdown-menu a, .p-dropdown-content a"
+        );
+        const dropdownMenuTitles = document.querySelectorAll(
+          ".dropdown-menu-title-only"
+        );
+        const menuItems = document.querySelectorAll(
+          ".MainMenuOne li, .MainMenuTwo li"
+        );
+        let isScrolling = false;
+
+        // 🎨 رنگ‌های سفارشی
+        const primaryColor = "#155d87";
+        const secondaryColor = "#155d87";
+        const hoverColor = "#34a1e5";
+        const clickColor = "#10415e";
+        const dotsMenuSpanColor = "#FFFFFF";
+
+        if (dotsMenuItems.length > 0) {
+          dotsMenuItems[0].classList.add("current");
+        }
+
+        function goToSection(index) {
+          if (index < 0 || index >= totalSections) return;
+          currentSection = index;
+
+          sections.forEach((section, i) => {
+            if (i === index) {
+              const duration = section.getAttribute("data-duration") || "0.8s";
+              section.style.setProperty("--duration", duration);
+              section.classList.add("active");
+              section.style.zIndex = "10";
+              section.style.pointerEvents = "auto";
+            } else {
+              section.classList.remove("active");
+              section.style.zIndex = "1";
+              section.style.pointerEvents = "none";
+            }
+          });
+
+          updateActiveDot();
+        }
+
+        function updateActiveDot() {
+          dotsMenuItems.forEach((li, index) => {
+            li.classList.toggle("current", index === currentSection);
+          });
+        }
+
+        window.addEventListener("wheel", function (event) {
+          if (isScrolling) return;
+          isScrolling = true;
+
+          if (event.deltaY > 0) {
+            goToSection(currentSection + 1);
+          } else {
+            goToSection(currentSection - 1);
+          }
+
+          setTimeout(() => (isScrolling = false), 800);
+        });
+
+        dotsMenuLinks.forEach((anchor, index) => {
+          anchor.addEventListener("click", function (event) {
+            event.preventDefault();
+            goToSection(index);
+          });
+        });
+
+        // حذف کامل هاور روی لینک‌ها
+        goToSection(0);
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.getElementById("header");
+
+        if (window.innerWidth <= 767) {
+          window.addEventListener("scroll", function () {
+            if (window.scrollY > 120) {
+              header.classList.add("header-sticky", "sticky-active");
+              header.style.position = "relative"; // پوزیشن ریلیتیو هنگام استیکی شدن
+            } else {
+              header.classList.remove("header-sticky", "sticky-active");
+              header.style.position = "fixed"; // پوزیشن فیکس هنگام حذف کلاس استیکی
+            }
+          });
+        }
+      });
+    </script>
+    <script>
+      function updateHrefForMobile() {
+        if (window.innerWidth <= 1024) {
+          // تنظیم بر اساس اندازه موبایل و تبلت
+          let targetLink = document.querySelector("li#ItemChangeaValue > a");
+          if (targetLink && targetLink.getAttribute("href") === "#slide2") {
+            targetLink.href = "#slider";
+          }
+        }
+      }
+
+      // اجرای تابع هنگام بارگذاری صفحه
+      window.addEventListener("DOMContentLoaded", updateHrefForMobile);
+
+      // اجرای تابع هنگام تغییر اندازه صفحه
+      window.addEventListener("resize", updateHrefForMobile);
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        if (window.innerWidth <= 767) {
+          let slider = document.querySelector("#slider");
+          let slidesWrapper = document.createElement("div");
+          let slides = Array.from(slider.children);
+          let currentIndex = 0;
+
+          // ایجاد یک لایه برای قرار دادن اسلایدها کنار هم
+          slidesWrapper.classList.add("slides-wrapper");
+          slider.appendChild(slidesWrapper);
+
+          // انتقال همه اسلایدها به داخل slidesWrapper
+          slides.forEach((slide) => {
+            slidesWrapper.appendChild(slide);
+          });
+
+          function goToSlide(index) {
+            let totalSlides = slides.length;
+            if (index >= totalSlides) index = 0; // حلقه بین اسلایدها
+            if (index < 0) index = totalSlides - 1;
+
+            currentIndex = index;
+            slidesWrapper.style.transform = `translateX(-${
+              currentIndex * 100
+            }%)`;
+          }
+
+          // تغییر خودکار اسلایدها هر 3 ثانیه
+          setInterval(() => {
+            goToSlide(currentIndex + 1);
+          }, 3000);
+        }
+      });
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        setTimeout(() => {
+          let dots = document.querySelectorAll(".flickity-page-dots");
+          dots.forEach((dot) => dot.remove());
+          console.log("تمام تگ‌های flickity-page-dots حذف شدند.");
+        }, 0);
+      });
+    </script>
+    <script>
+      // تعریف هفت متغیر رنگ برای هر سکشن
+      const sectionColors = {
+        slide1: "#E9EFF6", // رنگ برای سکشن اول
+        slide2: "#E9EFF6", // رنگ برای سکشن دوم
+        About_us: "#186587", // رنگ برای سکشن درباره ما
+        page_content: "#186587", // رنگ برای سکشن خدمات ما
+        our_service: "#186587", // رنگ برای سکشن محصولات
+        Price_inquiry: "#E9EFF6", // رنگ برای سکشن استعلام قیمت
+        contact_us: "#186587", // رنگ برای سکشن تماس با ما
+      };
+
+      // تابع برای روشن‌تر کردن رنگ
+      function lightenColor(color, percent) {
+        // تبدیل رنگ HEX به RGB
+        let r = parseInt(color.slice(1, 3), 16);
+        let g = parseInt(color.slice(3, 5), 16);
+        let b = parseInt(color.slice(5, 7), 16);
+
+        // محاسبه مقدار روشن‌تر برای هر کانال (R, G, B)
+        r = Math.min(255, Math.round(r + (255 - r) * percent));
+        g = Math.min(255, Math.round(g + (255 - g) * percent));
+        b = Math.min(255, Math.round(b + (255 - b) * percent));
+
+        // بازگرداندن رنگ جدید به صورت HEX
+        return (
+          "#" + [r, g, b].map((x) => x.toString(16).padStart(2, "0")).join("")
+        );
+      }
+
+      let currentSectionId = null;
+
+      function updateHeaderLinksColor(sectionId) {
+        // پیدا کردن تمام لینک‌های منوی هدر
+        const headerLinks = document.querySelectorAll(
+          "#mainMenu nav > ul > li > a"
+        );
+
+        // پیدا کردن آیکون‌ها و المان‌های داخل header-extras با سلکتورهای جدید
+        const globeIcon = document.querySelector(
+          ".header-extras > ul > li > div.p-dropdown > a > i.icon-globe"
+        );
+        const dropdownSpan = document.querySelector(
+          ".header-extras > ul > li > div.p-dropdown > a > span"
+        );
+        const searchIcon = document.querySelector(
+          ".header-extras > ul > li > a > i.icon-search"
+        );
+
+        // گرفتن رنگ مربوط به سکشن فعال
+        const newColor = sectionColors[sectionId] || "#000000"; // اگر رنگی برای سکشن وجود نداشت، رنگ پیش‌فرض سیاه
+
+        // محاسبه رنگ روشن‌تر برای حالت hover, click, focus
+        const hoverColor = lightenColor(newColor, 0.3); // 30% روشن‌تر
+
+        // تغییر رنگ لینک‌های منو
+        headerLinks.forEach((link) => {
+          link.style.color = newColor;
+          link.addEventListener("mouseenter", () => {
+            link.style.color = hoverColor;
+          });
+          link.addEventListener("mouseleave", () => {
+            link.style.color = newColor;
+          });
+          link.addEventListener("click", () => {
+            link.style.color = hoverColor;
+          });
+          link.addEventListener("focus", () => {
+            link.style.color = hoverColor;
+          });
+          link.addEventListener("blur", () => {
+            link.style.color = newColor;
+          });
+        });
+
+        // تغییر رنگ آیکون‌ها و المان‌های header-extras
+        if (globeIcon) {
+          globeIcon.style.color = newColor;
+          globeIcon.addEventListener("mouseenter", () => {
+            globeIcon.style.color = hoverColor;
+          });
+          globeIcon.addEventListener("mouseleave", () => {
+            globeIcon.style.color = newColor;
+          });
+          globeIcon.addEventListener("click", () => {
+            globeIcon.style.color = hoverColor;
+          });
+        }
+        if (dropdownSpan) {
+          dropdownSpan.style.color = newColor;
+          dropdownSpan.addEventListener("mouseenter", () => {
+            dropdownSpan.style.color = hoverColor;
+          });
+          dropdownSpan.addEventListener("mouseleave", () => {
+            dropdownSpan.style.color = newColor;
+          });
+          dropdownSpan.addEventListener("click", () => {
+            dropdownSpan.style.color = hoverColor;
+          });
+        }
+        if (searchIcon) {
+          searchIcon.style.color = newColor;
+          searchIcon.addEventListener("mouseenter", () => {
+            searchIcon.style.color = hoverColor;
+          });
+          searchIcon.addEventListener("mouseleave", () => {
+            searchIcon.style.color = newColor;
+          });
+          searchIcon.addEventListener("click", () => {
+            searchIcon.style.color = hoverColor;
+          });
+        }
+      }
+
+      function getActiveSection() {
+        // پیدا کردن تمام المان‌های با کلاس section که کلاس active دارند
+        const activeSections = document.querySelectorAll(".section.active");
+
+        if (activeSections.length > 0) {
+          const activeSection = activeSections[0]; // اولین المان فعال
+          if (activeSection.id !== currentSectionId) {
+            currentSectionId = activeSection.id;
+
+            // اصلاح ID برای همخوانی با sectionColors
+            const correctedId = currentSectionId.replace(/-/g, "_"); // تبدیل خط فاصله (-) به خط زیرین (_)
+
+            // به‌روزرسانی رنگ لینک‌های هدر و آیکون‌های header-extras
+            updateHeaderLinksColor(correctedId);
+          }
+        } else {
+          console.log("No active section found.");
+        }
+      }
+
+      // به‌محض بارگذاری صفحه
+      window.addEventListener("load", () => {
+        getActiveSection();
+      });
+
+      // واکنش به تغییرات DOM برای تشخیص جابه‌جایی کلاس active
+      const observer = new MutationObserver(() => {
+        getActiveSection();
+      });
+
+      // مشاهده تغییرات روی المان‌های body
+      observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ["class"], // فقط تغییرات کلاس‌ها را مشاهده کن
+      });
+
+      // مدیریت کلیک‌های منو با smooth scroll
+      document.querySelectorAll('a[href^="#"]').forEach((link) => {
+        link.addEventListener("click", (event) => {
+          event.preventDefault(); // جلوگیری از رفتار پیش‌فرض لینک
+          const targetId = link.getAttribute("href").substring(1);
+          const targetSection = document.getElementById(targetId);
+
+          if (targetSection) {
+            // حذف کلاس active از همه سکشن‌ها
+            document.querySelectorAll(".section").forEach((section) => {
+              section.classList.remove("active");
+            });
+
+            // اضافه کردن کلاس active به سکشن مقصد
+            targetSection.classList.add("active");
+
+            // اسکرول به سکشن مقصد
+            window.scrollTo({
+              top: targetSection.offsetTop,
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

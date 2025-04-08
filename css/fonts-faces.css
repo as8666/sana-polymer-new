@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'vazir';
+    src: 
+         url('fonts/Vazir.ttf') format('truetype');
+  }
+  ::root{
+    font-family: 'vazir', sans-serif !important;
+
+  }
+  body {
+    font-family: 'vazir', sans-serif !important;
+  }
+  html {
+    font-family: 'vazir', sans-serif !important;
+  }
